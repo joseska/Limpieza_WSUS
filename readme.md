@@ -1,21 +1,21 @@
-# OpenAddresses
+## Limpieza de un Servidor WSUS Server desde Powershell
 
-A global collection of address data sources, open and free to use. Join, download and contribute. We're just getting started.
+Un simple Script que permite ejecutar el Asistente de Limpieza del WSUS desde Powershell. La unica variable obligatoria que tienes que modificar es "$updateServer" por el nombre de tu servidor WSUS.
 
-This repository is a collection of references to address data sources.
+$useSecureConnection -> si utilizas SSL
+$portNumber -> Puerto que utilizas. Por defecto 80. Si utilizas SSL 443
 
-- See [openaddresses.io](http://openaddresses.io/) for a data download.
+# Parametros Conexion WSUS:
+[String]$updateServer = "WSUS-R-38"
+[Boolean]$useSecureConnection = $False
+[Int32]$portNumber = 80
 
-## Contributing addresses
+Y las diferentes opciones de limpieza. Si no quieres alguna, simplemente hay que cambiar el estado a $False.
+# Parametros de Limpieza:
+[Boolean]$supersededUpdates = $True
+[Boolean]$expiredUpdates = $True
+[Boolean]$obsoleteUpdates = $True
+[Boolean]$compressUpdates = $True
+[Boolean]$obsoleteComputers = $True
+[Boolean]$unneededContentFiles = $True
 
-- [Open an issue](https://github.com/openaddresses/openaddresses/issues/new) and give information about where to find more address data. Be sure to include a link to the data and a description of the coverage area for the data.
-- You can also create a pull request to the [sources](https://github.com/openaddresses/openaddresses/tree/master/sources) directory.
-- More details in [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Why collect addresses?
-
-Street address data is essential infrastructure. Street names, house numbers, and post codes combined with geographic coordinates connects digital to physical places. Free and open addresses are rocket fuel for civic and commercial innovation.
-
-## License
-
-Code is available under BSD, the data collection (sources/) is public domain. See respective LICENSE files in project root for code and under sources/ for the data collection.
