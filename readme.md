@@ -5,13 +5,13 @@ Un simple Script que permite ejecutar el Asistente de Limpieza del WSUS desde Po
 $useSecureConnection -> si utilizas SSL
 $portNumber -> Puerto que utilizas. Por defecto 80. Si utilizas SSL 443
 
-# Parametros Conexion WSUS:
+### Parametros Conexion WSUS:
 [String]$updateServer = "WSUS-R-38"
 [Boolean]$useSecureConnection = $False
 [Int32]$portNumber = 80
 
 Y las diferentes opciones de limpieza. Si no quieres alguna, simplemente hay que cambiar el estado a $False.
-# Parametros de Limpieza:
+### Parametros de Limpieza:
 [Boolean]$supersededUpdates = $True
 [Boolean]$expiredUpdates = $True
 [Boolean]$obsoleteUpdates = $True
