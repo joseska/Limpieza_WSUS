@@ -2,7 +2,7 @@
 
 Un simple Script que permite ejecutar el Asistente de Limpieza del WSUS desde Powershell. La unica variable obligatoria que tienes que modificar es "$updateServer" por el nombre de tu servidor WSUS.
 
-$useSecureConnection -> si utilizas SSL  
+$useSecureConnection -> Cambiar a $True si utilizas SSL  
 $portNumber -> Puerto que utilizas. Por defecto 80. Si utilizas SSL 443  
 
 ### Parametros Conexion WSUS:  
